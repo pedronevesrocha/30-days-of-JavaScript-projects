@@ -76,6 +76,7 @@ main {
     border-radius: 0.3rem;
     font-size: 1.2rem;
     border: none;
+    cursor: pointer;
 }
 
 footer {

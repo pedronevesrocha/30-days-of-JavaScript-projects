@@ -17,13 +17,15 @@ function voicespeech() {
 synth.addEventListener('voiceschanged', voicespeech)
 
 function texttospeech(text) {
-    let utternance = new SpeechSynthesisUtternance(text)
+    let utterance = new SpeechSynthesisUtterance(text)
+    
     for (let voice of synth.getVoices()) {
         if (voice.name === voicelist.value) {
-        utternance.voice = voice
+        utterance.voice = voice
+        
         }
     }
-speechSynthesis.speak(utternance)
+speechSynthesis.speak(utterance)
 }
 
 speechbtn.addEventListener('click', (e)  => {
@@ -31,6 +33,7 @@ speechbtn.addEventListener('click', (e)  => {
     if (textarea.value !== '') {
         if (!synth.speaking) {
             texttospeech(textarea.value)
+            
         }
         if (textarea.value.length > 80) {
             if (isSpeaking) {
@@ -45,7 +48,7 @@ speechbtn.addEventListener('click', (e)  => {
                 }
             })
         } else {
-            speechbtn.inner.HTML = 'Convert to Speech'
+            speechbtn.innerHTML = 'Convert to Speech'
         }
     }
 })
