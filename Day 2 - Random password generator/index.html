@@ -5,8 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d507937b83.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
-    
+    <div class="box">
+        <h2>Random Password Generator</h2>
+        <input type="text" placeholder="Create password" id="password"readonly>
+        <table>
+            <th><div id="button" class="btn1" onclick="genPassword()">Generate</div></th>
+            <th><a id="button" class="btn2" onclick="copyPassword()">Copy</a></th>
+        </table>
+    </div>
+    <footer>
+        <p>
+            Copyright ©
+            <script>
+                document.write(new Date().getFullYear())
+            </script>
+            
+        </p>
+        <a href="https://github.com/pedronevesrocha" target="_blank">
+            pedronevesrocha 
+            <i class="fab fa-github"></i></a>
+    </footer>
+    <script src="main.js"></script>
 </body>
 </html>
