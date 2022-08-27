@@ -1,14 +1,10 @@
 footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
     width: 100%;
     padding: 10px;
     font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
   }
   
   .fa-github {
@@ -31,28 +27,7 @@ footer {
     background-size: cover;
   }
 
-  h1 {
-    position: absolute;
-    top: 45vh;
-    left: 1vw;
-    font-size: 3rem;
-    font-weight: bold;
-    background: linear-gradient(to bottom right ,rgb(13, 211, 242),rgba(255, 180, 192));
-    background-clip: text;
-    color: transparent;
-
- }
-
- h2 {
-    position: absolute;
-    top: 52vh;
-    left: 1vw;
-    font-size: 1rem;
-    font-weight: bolder;
-    background: linear-gradient(to bottom right ,rgb(13, 211, 242),rgba(255, 180, 192));
-    background-clip: text;
-    color: transparent;
- }
+  
 
  #game {
     width: 400px;
@@ -60,11 +35,9 @@ footer {
     border: 3px solid black;
     border-radius: 10px;
     border-color: rgb(0, 0, 0);
-    position: absolute;
-    top: 20vh;
-    left: 35vw;
     overflow: hidden;
     background-color: rgba(254, 254, 254, 0.07);
+    
  }
 
  #character {
@@ -87,7 +60,7 @@ footer {
     top: 100px;
     margin-top: -20px;
     background: linear-gradient(to bottom right ,rgb(13, 211, 242),rgba(255, 180, 192));
-    background-clip: border-box;
+    -webkit-background-clip: border-box;
     color: transparent;
  }
 
@@ -98,4 +71,29 @@ footer {
     position: relative;
     top: 100px;
     margin-top: -20px;
+ }
+
+ #father {
+   display: flex;
+   justify-content: space-around;
+   flex-direction: column;
+   
+   
+ }
+
+ #p {
+   display: flex;
+   justify-content: center;
+
+ }
+
+ #copy {
+   margin-top: 7px;
+   
+ }
+
+ #tittle {
+   display: flex;
+   justify-content: center;
+   margin-bottom: 30px;
  }
