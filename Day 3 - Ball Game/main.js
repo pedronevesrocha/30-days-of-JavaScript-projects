@@ -6,14 +6,14 @@ var counter = 0;
 var currentBlocks = [];
 
 function moveLeft () {
-    const left = parseInt(window.getComputedStyle(character).getPropertyValue("left"));
+    var left = parseInt(window.getComputedStyle(character).getPropertyValue("left"));
     if(left>0) {
         character.style.left = left - 2 + "px";
     }
 }
 
 function moveRight () {
-    const left = parseInt(window.getComputedStyle(character).getPropertyValue("left"));
+    var left = parseInt(window.getComputedStyle(character).getPropertyValue("left"));
     if(left<300) {
         character.style.left = left - 2 + "px";
     }
@@ -36,23 +36,23 @@ document.addEventListener("keyup", event => {
     both=0;
 });
 
-const blocks = setInterval(function() {
-    const blockLastTop = document.getElementById("block" +(counter-1));
-    const holeLastTop = document.getElementById("hole" +(counter-1));
+var blocks = setInterval(function() {
+    var blockLast = document.getElementById("block" +(counter-1));
+    var holeLast = document.getElementById("hole" +(counter-1));
     if(counter>0) {
-        const blockLastTop = parseInt(window.getComputedStyle(blockLast).getPropertyValue("top"));
-        const holeLastTop = parseInt(window.getComputedStyle(holeLast).getPropertyValue("top"));
+        var blockLastTop = parseInt(window.getComputedStyle(blockLast).getPropertyValue("top"));
+        var holeLastTop = parseInt(window.getComputedStyle(holeLast).getPropertyValue("top"));
     }
-    if(blockLastTop<400|| counter === 0) {
-        const block = document.createElement("div");
-        const hole = document.createElement("div");
+    if(blockLastTop<400|| counter==0) {
+        var block = document.createElement("div");
+        var hole = document.createElement("div");
         block.setAttribute("class", "block");
         block.setAttribute("class", "hole");
         block.setAttribute("id", "block"+counter);
         block.setAttribute("id", "hole"+counter);
         block.style.top = blockLastTop + 60 + "px";
-        hole.style.top = blockLastTop + 60 + "px";
-        const random = Math.floor(Math.random() * 360);
+        hole.style.top = holeLastTop + 60 + "px";
+        var random = Math.floor(Math.random() * 360);
         hole.style.left = random + "px";
         game.appendChild(block);
         game.appendChild(hole);
@@ -60,15 +60,15 @@ const blocks = setInterval(function() {
         counter++;
         }
 
-        const characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
-        const characterLeft = parseInt(window.getComputedStyle(character).getPropertyValue("left"));
+        var characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
+        var characterLeft = parseInt(window.getComputedStyle(character).getPropertyValue("left"));
         var drop = 0;
         if(characterTop <= 0) {
             alert("Game over. Score: " +(counter-9));
             clearInterval(blocks);
             location.reload();
         }
-        for(let i = 0; 1 < currentBlocks.length; i ++) {
+        for(var i = 0; 1 < currentBlocks.length;i++) {
             let current = currentBlocks[i];
             let iblock = document.getElementById("block"+current);
             let ihole = document.getElementById("hole"+current);
@@ -84,7 +84,7 @@ const blocks = setInterval(function() {
             }
             if(iblockTop-20<characterTop && iblockTop>characterTop) {
                 drop++;
-                if(iholeLeft <= characterLeft && iholeLeft+20 <= characterLeft)  {
+                if(iholeLeft <= characterLeft && iholeLeft+20 >= characterLeft)  {
                     drop = 0;
             }
         }
