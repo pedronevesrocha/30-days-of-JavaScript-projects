@@ -1,1 +1,45 @@
-.cs
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Words Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d507937b83.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main>
+        <div class="title">Word Scramble</div>
+        <div class="hr">
+          --------------------------------------------------------
+        </div>
+        <div class="scramble-word"><p class="word">trgtgtgggg</p></div>
+        <div class="time"></div>
+        <input
+          type="text"
+          class="input-text"
+          placeholder="Enter a valid word"
+          required
+        />
+  
+        <div class="btn">
+          <button class="refresh-btn">Refresh Word</button>
+          <button class="submit-btn">Check word</button>
+        </div>
+      </main>
+      <footer>
+        <p>
+            Copyright ©
+            <script>
+                document.write(new Date().getFullYear())
+            </script>
+            
+        </p>
+        <a href="https://github.com/pedronevesrocha" target="_blank">
+            pedronevesrocha 
+            <i class="fab fa-github"></i></a>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
