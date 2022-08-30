@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Payment Form</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/d507937b83.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <main>
+        <div class="card">
+          <div class="front-side">
+            <div class="chip"></div>
+            <div class="card-number">
+              0000&nbsp; &nbsp; 0000 &nbsp; &nbsp; 0000 &nbsp; &nbsp; 0000
+            </div>
+            <div class="validity">
+              <div class="month">01</div>
+              /
+              <div class="year">11</div>
+            </div>
+            <div class="cardhoder-name">Enter Name</div>
+            <div class="card-type">
+              <i class="fa-brands fa-cc-visa visa"></i>
+              <i class="fa-brands fa-cc-mastercard master"></i>
+            </div>
+          </div>
+          <div class="back-side">
+            <div class="black-boader"></div>
+            <div class="cvc">111</div>
+          </div>
+        </div>
+        <div class="form">
+          <input
+            type="text"
+            class="cardno input"
+            placeholder="Enter Card number"
+            maxlength="16"
+            required
+          />
+          <input
+            type="text"
+            class="cardmonth input"
+            placeholder="Enter Month"
+            maxlength="2"
+            required
+          />
+          <input
+            type="text"
+            class="cardyear input"
+            placeholder="Enter Year"
+            maxlength="4"
+            required
+          />
+          <input
+            type="text"
+            class="cardholdername input"
+            placeholder="Enter Name"
+            maxlength="50"
+            required
+          />
+          <input
+            type="text"
+            name=""
+            class="card-cvc input"
+            placeholder="Enter Cvc"
+            maxlength="3"
+            required
+          />
+        </div>
+      </main>
+      <footer>
+        <p>
+            Copyright ©
+            <script>
+                document.write(new Date().getFullYear())
+            </script>
+            
+        </p>
+        <a href="https://github.com/pedronevesrocha" target="_blank">
+            pedronevesrocha 
+            <i class="fab fa-github"></i></a>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
