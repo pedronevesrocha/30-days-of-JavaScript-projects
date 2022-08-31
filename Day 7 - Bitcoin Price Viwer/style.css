@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Bitter', serif;
+    font-family: 'Cabin', sans-serif;
+    font-family: 'Edu QLD Beginner', cursive;
+    font-family: 'Edu SA Beginner', cursive;
+    font-family: 'Edu TAS Beginner', cursive;
+    font-family: 'Roboto Slab', serif;
+    font-family: 'Signika Negative', sans-serif;
+  }
+  main {
+    background-color: rgb(248, 219, 122);
+    box-shadow: 0 0 20px 5px rgb(146, 145, 145);
+    border-radius: 5px;
+    height: 250px;
+    width: 400px;
+  }
+  .side-clip {
+    position: absolute;
+    filter: drop-shadow(-2px -2px 5px rgba(50, 50, 0, 0.521));
+  }
+  .clip {
+    position: absolute;
+    content: ' ';
+    clip-path: polygon(52% 75%, 0% 100%, 100% 100%);
+    background-color: rgb(248, 219, 122);
+    border-radius: 5px;
+    transform: translateX(223px) translateY(18px) rotateZ(134deg);
+    height: 200px;
+    width: 100px;
+  }
+  .round {
+    height: 100%;
+    width: 250px;
+    transform: translateX(-100px);
+    position: relative;
+    left: 0;
+    top: 0;
+    transform-origin: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .round .coinlogo {
+    box-shadow: 0 0 20px 5px rgba(18, 18, 18, 0.515);
+    position: absolute;
+  
+    background-color: rgb(150, 110, 37);
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+  }
+  .round .coinlogo img {
+    height: 100%;
+    width: 100%;
+  }
+  .info {
+    transform: translateX(165px) translateY(-153px);
+    box-shadow: 0 0 10px 1px rgba(87, 87, 87, 0.631);
+    border-radius: 3px;
+    background-color: white;
+    width: 230px;
+    height: 150px;
+  }
+  .name {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    position: absolute;
+    transform: translateY(20px) translateX(20px);
+  }
+  
+  .currency-type {
+    transform: translateY(20px) translateX(170px);
+  }
+  
+  .line {
+    position: absolute;
+    transform: translateX(15px) translateY(30px);
+    opacity: 0.8;
+    color: gray;
+  }
+  
+  .price {
+    transform: translateY(60px) translateX(1rem);
+    font-size: 2.5rem;
+  }
+  .currency {
+    position: absolute;
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+  }
+  
+  .fa-github {
+  
+    font-size: 24px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .fa-github:hover {
+    transform: rotate(360deg) scale(1.2);
+  }
