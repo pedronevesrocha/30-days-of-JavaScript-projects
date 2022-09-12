@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <script src="https://kit.fontawesome.com/d507937b83.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="timer-container">
+        <audio>
+          <source src="https://dylanmacnab.github.io/focus-timer/sounds/timer-bell.mp3"></source>
+          <source src="https://dylanmacnab.github.io/focus-timer/sounds/timer-bell.ogg"></source>
+        </audio>
+      
+        <input id="minutes" class="timer-input" type="text" name="minutes" placeholder="How many minutes?" autocomplete="off"></input>
+        <div class="timer-controls">
+          <input id="stop" class="timer-button" type="button" value="Pause"></input>
+          <input id="start" class="timer-button timer-start" type="button" value="Start Timer"></input>
+          <input id="reset" class="timer-button" type="button" value="Reset"></input>
+        </div>
+        <h1 id="time-display" class="timer-display">00:00</h1>
+      </div>
+      
+      <div class="state-floor"></div>
+      <img id="background-setting" class="state-setting" src="https://dylanmacnab.github.io/focus-timer/img/desk-tea.svg">
+      <footer>
+        <p>
+            Copyright ©
+            <script>
+                document.write(new Date().getFullYear())
+            </script>
+            
+        </p>
+        <a href="https://github.com/pedronevesrocha" target="_blank">
+            pedronevesrocha 
+            <i class="fab fa-github"></i></a>
+    </footer>
+    <script></script>
+</body>
+</html>
